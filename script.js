@@ -8,7 +8,7 @@ const renderQuote = function(data) {
     newQuoteElement.classList.add('quote-parent');
     newQuoteElement.innerHTML = `
         <div class="quote">
-            <p>${quote}</p>
+            <p>" ${quote} " <br><br> ~ Ye </p>
         </div>`;
 
     if (quoteEl) {
@@ -23,7 +23,7 @@ btn.addEventListener('click', function() {
     fetch('https://api.kanye.rest')
         .then(response => {
             if (!response.ok) {
-                throw new Error('Network response was not ok');
+                throw new Error('Network problem');
             }
             return response.json();
         })
